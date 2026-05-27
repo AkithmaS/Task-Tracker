@@ -46,6 +46,7 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
+<<<<<<< HEAD
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[12.0.1, )"
@@ -54,15 +55,25 @@
               "target": "Package",
               "version": "[4.0.3, )"
             },
+=======
+>>>>>>> 230985e67ea4d8d313764e2ce2b0f93a0ea92674
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[10.0.8, )"
             },
+<<<<<<< HEAD
             "Microsoft.EntityFrameworkCore": {
+=======
+            "Microsoft.AspNetCore.OpenApi": {
+>>>>>>> 230985e67ea4d8d313764e2ce2b0f93a0ea92674
               "target": "Package",
               "version": "[10.0.8, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
+<<<<<<< HEAD
+=======
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+>>>>>>> 230985e67ea4d8d313764e2ce2b0f93a0ea92674
               "suppressParent": "All",
               "target": "Package",
               "version": "[10.0.8, )"
@@ -70,10 +81,13 @@
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[10.0.1, )"
+<<<<<<< HEAD
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.5.0, )"
+=======
+>>>>>>> 230985e67ea4d8d313764e2ce2b0f93a0ea92674
             }
           },
           "imports": [
