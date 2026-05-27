@@ -34,7 +34,7 @@ public class TaskService : ITaskService
             Description = request.Description,
             Priority = request.Priority,
             Status = request.Status,
-            DueDate = request.DueDate
+            DueDate = NormalizeToUtc(request.DueDate)
         };
 
         _dbContext.Tasks.Add(task);
@@ -75,7 +75,7 @@ public class TaskService : ITaskService
 
         if (request.DueDate.HasValue)
         {
-            task.DueDate = request.DueDate;
+            task.DueDate = NormalizeToUtc(request.DueDate);
         }
 
         await _dbContext.SaveChangesAsync();
@@ -111,5 +111,20 @@ public class TaskService : ITaskService
             task.DueDate,
             task.CreatedAt
         );
+    }
+
+    private static DateTime? NormalizeToUtc(DateTime? value)
+    {
+        if (!value.HasValue)
+        {
+            return null;
+        }
+
+        return value.Value.Kind switch
+        {
+            DateTimeKind.Utc => value.Value,
+            DateTimeKind.Local => value.Value.ToUniversalTime(),
+            _ => DateTime.SpecifyKind(value.Value, DateTimeKind.Utc)
+        };
     }
 }
