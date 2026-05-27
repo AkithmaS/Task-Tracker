@@ -1,0 +1,14 @@
+{
+	"extends": [
+		"next/core-web-vitals",
+		"plugin:sonarjs/recommended",
+		"plugin:jsx-a11y/recommended",
+		"prettier"
+	],
+	"plugins": ["prettier", "sonarjs", "jsx-a11y"],
+	"rules": {
+		"prettier/prettier": "error",
+		"no-unused-vars": "warn",
+		"react/no-unescaped-entities": "off"
+	}
+}
