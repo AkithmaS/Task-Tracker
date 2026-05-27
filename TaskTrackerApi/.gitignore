@@ -1,0 +1,4 @@
+TaskTrackerApi/bin/
+TaskTrackerApi/obj/
+TaskTrackerApi/appsettings.Development.json
+TaskTrackerApi/appsettings.Local.json
